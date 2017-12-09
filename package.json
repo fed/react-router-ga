@@ -1,0 +1,37 @@
+{
+  "name": "react-router-ga",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fknussel/react-router-ga.git"
+  },
+  "author": {
+    "name": "Federico Knüssel",
+    "email": "fknussel@gmail.com"
+  },
+  "keywords": [
+    "react-router-ga",
+    "react-router-dom",
+    "react-ga",
+    "analytics",
+    "react-analytics",
+    "react-router-analytics"
+  ],
+  "scripts": {
+    "flow": "flow",
+    "build": "babel index.js --out-file lib/index.js"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-ga": "^2.3.5",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "flow-bin": "^0.61.0"
+  }
+}
