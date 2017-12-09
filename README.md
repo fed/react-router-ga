@@ -6,8 +6,8 @@ Google Analytics component for React Router.
 
 | Prop | Type | Description | Default value |
 |------|------|-------------|---------------|
-| `id` | string | Google Analytics ID | Required |
-| `debub` | boolean | If enabled, react-router-ga will log all page views to the console | `false` |
+| `id` | string | Google Analytics tracking ID | Required |
+| `debug` | boolean | If enabled, react-router-ga will log all page views to the console | `false` |
 
 ## Usage Example
 
@@ -25,6 +25,7 @@ ReactDOM.render(
       <App>
         <Switch>
           <Route exact path="/login" component={Login} />
+          // your other routes
         </Switch>
       </App>
     </Analytics>

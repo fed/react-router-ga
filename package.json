@@ -21,19 +21,13 @@
   ],
   "scripts": {
     "flow": "flow",
-    "build": "browserify -e index.js -o lib/index.js -x=react -x=react-router-dom -t [ babelify ]"
-  },
-  "dependencies": {
-    "prop-types": "^15.6.0",
-    "react-ga": "^2.3.5"
+    "build": "babel index.js --out-file lib/index.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
-    "babelify": "^8.0.0",
-    "browserify": "^14.5.0",
     "flow-bin": "^0.61.0"
   },
   "peerDependencies": {
