@@ -16,7 +16,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Analytics from 'react-router-ga';
-import App from './container/App';
+import App from './containers/App';
+import Login from './containers/Login';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -24,7 +25,6 @@ ReactDOM.render(
       <App>
         <Switch>
           <Route exact path="/login" component={Login} />
-          <Route exact path="*" component={NoMatch} />
         </Switch>
       </App>
     </Analytics>
