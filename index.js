@@ -15,6 +15,7 @@ type Props = {
 class ReactRouterGA extends React.Component<Props> {
   constructor(props) {
     super(props);
+    this.sendPageView = this.sendPageView.bind(this);
     ReactGA.initialize(props.id);
   }
 
