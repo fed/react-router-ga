@@ -41,4 +41,4 @@ ReactRouterGA.defaultProps = {
   debug: false
 };
 
-export default withRouter(Analytics);
+export default withRouter(ReactRouterGA);
