@@ -1,6 +1,6 @@
 # react-router-ga
 
-Google Analytics component for React Router.
+Google Analytics component for React Router. Bear in mind this is a super simple implementation that only logs page views. Logging of custom events, exceptions, user timings or social interactions are not supported.
 
 ## Props
 
@@ -25,7 +25,6 @@ ReactDOM.render(
       <App>
         <Switch>
           <Route exact path="/login" component={Login} />
-          // your other routes
         </Switch>
       </App>
     </Analytics>
