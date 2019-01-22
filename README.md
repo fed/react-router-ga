@@ -8,7 +8,7 @@ Google Analytics component for React Router. Bear in mind this is a super simple
 |------|------|-------------|---------------|
 | `id` | string | Google Analytics tracking ID | Required |
 | `debug` | boolean | If enabled, react-router-ga will log all page views to the console | `false` |
-| `pathnameOnly` | boolean | If enabled, react-router-ga will only send page views when the pathname changed | `false` |
+| `trackPathnameOnly` | boolean | If enabled, react-router-ga will only send page views when the pathname changed | `false` |
 
 ## Usage Example
 
