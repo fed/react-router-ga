@@ -6,6 +6,7 @@ import type { Location, RouterHistory } from 'react-router-dom';
 type Props = {
   id: string, // Google Analytics Tracking ID
   debug: boolean,
+  pathnameOnly: boolean,
   children?: React.Node,
   location: Location,
   history: RouterHistory
@@ -48,6 +49,13 @@ class ReactRouterGA extends React.Component<Props> {
     if (!window.ga) {
       return;
     }
+
+    // Do nothing if pathnameOnly is enabled and the pathname didn't change.
+    if (this.props.pathnameOnly && location.pathname === this.lastPathname) {
+      return;
+    }
+
+    this.lastPathname = location.pathname;
 
     // Sets the page value on the tracker.
     window.ga('set', 'page', location.pathname);
