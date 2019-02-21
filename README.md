@@ -7,6 +7,7 @@ Google Analytics component for React Router. Bear in mind this is a super simple
 | Prop | Type | Description | Default value |
 |------|------|-------------|---------------|
 | `id` | string | Google Analytics tracking ID | Required |
+| `basename` | string | If provided, react-router-ga will prepend the basename to the pathname of each page view. (This should match the `basename` provided to the React Router `BrowserRouter` component. See [here](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/BrowserRouter.md#basename-string) for documentation.)
 | `debug` | boolean | If enabled, react-router-ga will log all page views to the console | `false` |
 | `trackPathnameOnly` | boolean | If enabled, react-router-ga will only send page views when the pathname changed | `false` |
 
