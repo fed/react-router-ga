@@ -5,6 +5,7 @@ import type { Location, RouterHistory } from 'react-router-dom';
 
 type Props = {
   id: string, // Google Analytics Tracking ID
+  basename: string,
   debug: boolean,
   trackPathnameOnly: boolean,
   children?: React.Node,
@@ -57,15 +58,16 @@ class ReactRouterGA extends React.Component<Props> {
 
     this.lastPathname = location.pathname;
 
-    // Sets the page value on the tracker.
-    window.ga('set', 'page', location.pathname);
+    // Sets the page value on the tracker. If a basename is provided, then it is prepended to the pathname.
+    const page = this.props.basename ? `${this.props.basename}${location.pathname}` : location.pathname;
+    window.ga('set', 'page', page);
 
     // Sending the pageview no longer requires passing the page
     // value since it's now stored on the tracker object.
     window.ga('send', 'pageview');
 
     if (this.props.debug) {
-      console.info(`[react-router-ga] Page view: ${location.pathname}`);
+      console.info(`[react-router-ga] Page view: ${page}`);
     }
   }
 
