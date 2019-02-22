@@ -38,3 +38,6 @@ ReactDOM.render(
 ## Dependencies
 
 This project has `react@^16.2.0` and `react-router-dom@^4.2.2` as peer dependencies.
+
+## Related Projects
++ [analytics-react](https://github.com/segmentio/analytics-react): Write analytics code once, collect customer data from any source, and send it to over 250+ destinations with [Segment](https://segment.com/).
