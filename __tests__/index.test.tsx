@@ -1,6 +1,5 @@
-// @flow
 import { create } from "react-test-renderer";
-import React from "react";
+import React, { Component } from "react";
 import Analytics from "../";
 import { MemoryRouter } from "react-router";
 import { Route } from 'react-router-dom'
@@ -10,7 +9,7 @@ describe("ReactRouterGA", () => {
     document.body.innerHTML = `<script src='//hello.js' />`
   })
 
-  class Page extends React.Component {
+  class Page extends Component {
     render () {
       return (<div>Hello</div>)
     }
