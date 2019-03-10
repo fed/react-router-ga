@@ -1,3 +1,3 @@
 {
-  "presets": ["flow", "env", "react"]
+  "presets": ["@babel/preset-flow", "@babel/preset-env", "@babel/preset-react"]
 }
