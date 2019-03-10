@@ -21,8 +21,24 @@
   ],
   "scripts": {
     "flow": "flow",
+    "coverage": "codecov -f ./coverage/lcov.info",
     "test": "jest",
     "build": "babel index.js --out-file lib/index.js"
+  },
+  "types": "types/index.d.ts",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "collectCoverage": true,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -30,13 +46,21 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@types/history": "^4.7.2",
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.7",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/react-test-renderer": "^16.8.1",
     "babel-jest": "^24.3.1",
+    "codecov": "^3.2.0",
     "flow-bin": "^0.94.0",
-    "flow-typed": "^2.5.1",
     "jest": "^24.3.1",
     "react": "^16.8.4",
     "react-router-dom": "^4.3.1",
-    "react-test-renderer": "^16.8.4"
+    "react-test-renderer": "^16.8.4",
+    "ts-jest": "^24.0.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.3333"
   },
   "peerDependencies": {
     "react": "^16.2.0",
