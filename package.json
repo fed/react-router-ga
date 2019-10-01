@@ -24,12 +24,12 @@
     "build": "babel index.js --out-file lib/index.js"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "flow-bin": "^0.103.0"
+    "flow-bin": "^0.108.0"
   },
   "peerDependencies": {
     "react": "^16.8.6",
