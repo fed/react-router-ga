@@ -42,7 +42,6 @@ class ReactRouterGA extends React.Component<Props> {
 
     // Initialize Google Analytics
     window.ga('create', this.props.id, 'auto');
-    window.ga('send', 'pageview');
   }
 
   sendPageView(location: Location) {
@@ -60,7 +59,7 @@ class ReactRouterGA extends React.Component<Props> {
 
     // Sets the page value on the tracker. If a basename is provided, then it is prepended to the pathname.
     const page = this.props.basename ? `${this.props.basename}${location.pathname}` : location.pathname;
-    
+
     window.ga('set', 'page', page);
 
     // Sending the pageview no longer requires passing the page
