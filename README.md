@@ -1,5 +1,9 @@
 # react-router-ga
 
+[![Downloads](https://img.shields.io/npm/dm/react-router-ga)](https://npm.im/react-router-ga)
+[![Version](https://img.shields.io/npm/v/react-router-ga)](https://npm.im/react-router-ga)
+[![License](https://img.shields.io/npm/l/react-router-ga)](https://opensource.org/licenses/MIT)
+
 Google Analytics component for React Router. Bear in mind this is a super simple implementation that only logs page views. Logging of custom events, exceptions, user timings or social interactions is currently not supported.
 
 ## Props
