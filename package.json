@@ -1,6 +1,6 @@
 {
   "name": "react-router-ga",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": {
@@ -20,19 +20,32 @@
     "react-router-analytics"
   ],
   "scripts": {
-    "flow": "flow",
-    "build": "babel index.js --out-file lib/index.js"
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn run type-check -- --watch",
+    "build": "yarn run build:types && yarn run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
     "@babel/preset-flow": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "flow-bin": "^0.108.0"
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/jest": "^24.0.18"
   },
-  "peerDependencies": {
-    "react": "^16.8.6",
-    "react-router-dom": "^5.0.0"
+  "dependencies": {
+    "@types/google.analytics": "^0.0.40",
+    "@types/node": "^12.7.12",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
+    "@types/react-router-dom": "^5.1.0",
+    "react": "^16.10.2",
+    "react-router-dom": "^5.1.2",
+    "typescript": "^3.6.4"
   }
 }
