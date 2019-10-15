@@ -40,7 +40,9 @@ ReactDOM.render(
 
 ## Demo App
 
-You can also have a look at this simple app bootstrapped with [create-react-app](https://github.com/facebook/create-react-app/) that's making use of [react-router](https://github.com/ReactTraining/react-router) and **react-router-ga**: https://github.com/fknussel/react-router-ga-example.
+You can also have a look at the demo app in the `example` directory. This app is bootstrapped with [create-react-app](https://github.com/facebook/create-react-app/) and is making use of both [react-router](https://github.com/ReactTraining/react-router) and [react-router-ga](https://npm.im/react-router-ga).
+
+Probably the code sample you are looking for is in the [`example/src/index.js` file](https://github.com/fknussel/react-router-ga/blob/master/example/src/index.js#L12-L22).
 
 ## Dependencies
 
