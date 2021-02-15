@@ -10,7 +10,8 @@ type Props = {
   trackPathnameOnly: boolean,
   children?: React.Node,
   location: Location,
-  history: RouterHistory
+  history: RouterHistory,
+  domains: string[]
 };
 
 class ReactRouterGA extends React.Component<Props> {
@@ -46,7 +47,9 @@ class ReactRouterGA extends React.Component<Props> {
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     // Initialize Google Analytics
-    window.ga('create', this.props.id, 'auto');
+    window.ga('create', this.props.id, 'auto', { allowLinker: true });
+    window.ga('require', 'linker');
+    window.ga('linker:autoLink', this.props.domains);
   }
 
   sendPageView(location: Location) {
