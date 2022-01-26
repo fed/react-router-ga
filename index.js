@@ -8,6 +8,7 @@ type Props = {
   basename: string,
   debug: boolean,
   trackPathnameOnly: boolean,
+  map?: (a: string) => string,
   children?: React.Node,
   location: Location,
   history: RouterHistory
@@ -63,7 +64,12 @@ class ReactRouterGA extends React.Component<Props> {
     this.lastPathname = location.pathname;
 
     // Sets the page value on the tracker. If a basename is provided, then it is prepended to the pathname.
-    const page = this.props.basename ? `${this.props.basename}${location.pathname}` : location.pathname;
+    var page = location.pathname;
+    if (this.props.basename) {
+      page = `${this.props.basename}${location.pathname}`;
+    } else if (this.props.map) {
+      page = this.props.map(page)
+    }
 
     window.ga('set', 'page', page);
 
@@ -82,7 +88,8 @@ class ReactRouterGA extends React.Component<Props> {
 }
 
 ReactRouterGA.defaultProps = {
-  debug: false
+  debug: false,
+  trackPathnameOnly: false
 };
 
 export default withRouter(ReactRouterGA);
